@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+
+<h3>The displacement is <br>{{ U }}</h3>
+<h3>The internal force is <br>{{ S }}</h3>
+
+<img src="{{ imo }}">
+    <p>* thinner the rod is, less inner force it take, but the thickness does not directly proportional to its magnitude.<br></p>
+
+
+<h2>Basic information is:</h2>
+    <p>number of nodes={{ basicdata[0] }}<br></p>
+    <p>number of rods={{ basicdata[1] }}<br></p>
+    <p>number of fixed nodes ={{ basicdata[2] }}<br></p>
+    <p>number of loads={{ basicdata[3] }}<br></p>
+<h2>Nodes information is:</h2>
+    x: {{ x }}<br>
+    y: {{ y }}<br>
+<h2>Rods information is:</h2>
+    ihl: {{ ihl }}<br>
+    ihr: {{ ihr }}<br>
+<h2>Loads information is:</h2>
+    node number: {{ loadnum }}<br>
+    force: {{ force }}<br>
+    theta: {{ theta }}<br>
+
+</body>
+</html>

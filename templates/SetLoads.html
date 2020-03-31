@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set Basic Done</title>
+</head>
+<body>
+<h1>Then set loads...</h1>
+    <form method="post">
+        {{ form.csrf_token() }}
+        {{ form.loadnum.label }}{{ form.loadnum }} e.g.: 3 3<br>
+        {{ form.force.label }}{{ form.force }} e.g.: 100000 20000<br>
+        {{ form.theta.label }}{{ form.theta }} e.g.: -0.78 0<br>
+        {% for message in get_flashed_messages() %}
+            {{ message }}
+        {% endfor %}<br>
+        {{ form.submit }} <br>
+    </form>
+<img src="{{ imh }}"+Math.random()>
+<h2>The basic values are:</h2>
+    {% for i in range(4) %}
+    <p>value={{ basicdata[i] }}<br></p>
+    {% endfor %}
+<h2>The Load Sizes are:</h2>
+    x: {{ x }}<br>
+    y: {{ y }}<br>
+<h2>The Load Directions are:</h2>
+    ihl: {{ ihl }}<br>
+    ihr: {{ ihr }}<br>
+
+</body>
+</html>

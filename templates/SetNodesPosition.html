@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set Basic Done</title>
+</head>
+<body>
+    <h1>Then set nodes...</h1>
+    <form method="post">
+        {{ form.csrf_token() }}
+        {{ form.x.label }}{{ form.x }} e.g.: 0 1 0.5 0.5<br>
+        {{ form.y.label }}{{ form.y }} e.g.: 0 0 0.289 0.866<br>
+        {% for message in get_flashed_messages() %}
+            {{ message }}
+        {% endfor %}<br>
+        {{ form.submit }} <br>
+    </form>
+    <h2>The basic values are:</h2><br>
+    {% for i in range(4) %}
+    <p>basicdata[{{i+1}}]={{ basicdata[i] }}<br></p>
+    {% endfor %}
+
+</body>
+</html>

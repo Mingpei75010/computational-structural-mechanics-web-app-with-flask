@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Let's set out basic data first...</h1>
+    <form method="post">
+        {{ form.csrf_token() }}
+        {{ form.n.label }}{{ form.n }} e.g.: 4<br>
+        {{ form.m.label }}{{ form.m }} e.g.: 6<br>
+        {{ form.nc.label }}{{ form.nc }} e.g.: 2<br>
+        {{ form.nLoad.label }}{{ form.nLoad }} e.g.: 2<br>
+        {{ form.submit }} <br>
+        {% for message in get_flashed_messages() %}
+            {{ message }}
+        {% endfor %}
+    </form>
+</body>
+</html>
