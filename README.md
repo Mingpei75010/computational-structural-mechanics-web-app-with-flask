@@ -6,29 +6,31 @@ Flask is a lightweight WSGI web application framework. It began as a simple wrap
 
 
 
-## Object oriented programming
+## Object-oriented programming
 
-The truss structure is digitalized using object oriented programming method. 
+The truss structure is digitalized using object-oriented programming method. 
 
 Three classes are defined here: Node, Rod, and Force.
 
 ### Class 'Node'
 
-Class Node has 5 proprities: x, y, num, loadX, loadY, defining the position, number, and the current load on this node.
+Class Node has 5 properties: x, y, num, loadX, loadY, defining the position, number, and the current load on this node.
 
 Besides some 'get value' and 'set value' functions, there is a function named AddLoad, and the form is ``AddLoad(self, Force:float, theta:float)``. This function is used to add a force (no torque in this web application) on this node by changing its properties, loadX and loadY.
 
 
 ### Class 'Rod'
 
-Class Rod has 5 properties: num, leftNode, rightNode, youngsModulus, and crossSection. Like nodes, each rod also has a unique number that will be stored in variable 'num'. Two Node-class variables, leftNode and rightNode, can tell the rod's position. youngsModulous and crossSection are physical properties of this rod that will be used to calculate the displacement of this structure, and a default value will be set as this object was created.
+Class Rod has 5 properties: num, leftNode, rightNode, youngsModulus, and crossSection. Like nodes, each rod also has a unique number that will be stored in variable 'num'. Two Node-class variables, leftNode and rightNode, can tell the rod's position. youngsModulus and crossSection are physical properties of this rod that will be used to calculate the displacement of this structure, and a default value will be set as this object was created.
 
 Besides 'get value' and 'set value' functions, there are some other functions: CalLength, CalCos, CalSin, Calrd, CalStif, etc. 
 
-``def Calrd(self)``: 'rd' is the abbreviation of rigid, that is 
+``def Calrd(self)``: 'rd' is the abbreviation of rigid, that is
+
 $$
 rigid = \frac{EA}{l}.
 $$
+
 where E is the variable youngsModulus, A is cross section area, and l is the length of this rod.
 
 
@@ -40,6 +42,7 @@ $$
 $$
 [ T ] = \left[ \begin{array} { l } \cos \alpha \\ \sin \alpha \end{array} \right].
 $$
+
 where $k$ is rigid above.
 
 
