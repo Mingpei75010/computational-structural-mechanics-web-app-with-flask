@@ -10,7 +10,7 @@ Flask is a lightweight WSGI web application framework. It began as a simple wrap
 
 The truss structure is digitalized using object-oriented programming method. 
 
-Three classes are defined here: Node, Rod, and Force.
+Two classes are defined here: Node and Rod.
 
 ### Class 'Node'
 
@@ -39,6 +39,7 @@ where E is the variable youngsModulus, A is cross section area, and l is the len
 $$
 [K] = [T][k][T]^T
 $$
+
 $$
 [ T ] = \left[ \begin{array} { l } \cos \alpha \\ \sin \alpha \end{array} \right].
 $$
